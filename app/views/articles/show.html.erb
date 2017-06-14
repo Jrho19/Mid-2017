@@ -1,0 +1,17 @@
+<h1>Article</h1>
+
+<h2>Title:</h2>
+  <%= @article.title %>
+
+<h2>Text:</h2>
+  <%= @article.text %>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a Comment:</h2>
+  <%= render 'comments/form' %>
+<p>
+  <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Back", articles_path %>
+</p>
